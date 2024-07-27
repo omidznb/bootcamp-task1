@@ -1,0 +1,218 @@
+/* reset */
+*,*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+
+    html{
+        font-size: 62.5%;
+    }
+
+    /* root variable */
+    :root{
+        --color-heading:#1E1E1E;
+        --color-btn: #219F95;
+        --color-secondary-dark:#234894;
+        --color-secondary-light:#AFCEDD;
+        --color-detaile:#696969;
+        --color-body:#1E1E1E;
+    }
+
+    h2,h3,h1{
+        color: var(--color-heading);
+        font-weight: 700;
+    }
+    
+    body{
+        font-size: 1.2rem;
+        color: var(--color-body);
+        line-height: 1.7;
+
+    }
+
+    h1{
+        font-size: 2.5rem;
+     }
+     h2{ font-size: 2.2rem;
+    margin-bottom: 1.5rem;}
+
+    @media screen and (min-width:1024px) {
+        body{font-size: 1.5rem;}
+        h1{font-size: 4rem;}
+        h2{font-size: 2.5rem;}
+     }
+     
+     .container{
+        max-width: 1140px;
+        margin: 0 auto;
+        
+     }
+
+     /* request header */
+     .request{
+        display: flex;
+        flex-direction: column;
+     }
+   
+     
+     .request__room{
+        margin-bottom: 5%;
+        margin-top: 3rem;
+     }
+      .request__header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+      }
+     .request__header-des{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       
+     }
+
+     .header__number{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-secondary-light);
+        color: var(--color-secondary-dark);
+        width: 40px;
+        height: 40px;
+        border: 6px;
+        text-align: center;
+        font-weight: 700;
+        border-radius: 6px;
+        margin-left: 1.5rem;
+     }
+
+     .header__title{ 
+        color: var(--color-secondary-dark);
+        font-weight: 700;
+     }
+     .request__data p{
+        color: var(--color-detaile);
+     }
+     
+     /* request-main */
+     .request__signup{
+        font-weight: 800;
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        padding-right: 1rem;
+        
+     }
+
+     .request__number{
+        color: var(--color-detaile);
+        padding-right: 1rem;
+        font-size: 1.2rem;
+     }
+
+     /* clinet detaile */
+     .client{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .client img{
+        background-color: var(--color-btn);
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        margin-left: 1rem;
+        
+    }
+    .client p{
+        font-size: 1.3rem;
+        font-weight: 800;
+
+    }
+
+    /* btn */
+    .request__btn{
+        background-color: var(--color-btn);
+        color: #fff;
+        padding: 2rem 4rem;
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+        width: auto;
+            height: 40px;
+            padding: 1rem;
+
+    }
+   
+    .request__footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+
+    @media screen and (max-width:600px) {
+        
+        .request__footer{
+            display: flex;
+            flex-direction: column;}
+            
+           
+            
+            .request__btn{
+                margin: 2rem 1rem;
+            }
+
+            .request--teil{
+                margin-bottom: 3rem;
+                
+                
+            }
+            
+    }
+    
+    @media screen and (max-width:876px) {
+        
+        .request--teil{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-bottom: 2rem;
+            border-bottom: solid 1px var(--color-body);
+        }
+        .request__btn{
+            width: auto;
+            height: 40px;
+            padding: 1rem;
+            margin-top: 2rem;
+            
+        }
+    }
+    
+    @media screen and (min-width:876px){
+        .request{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,1fr);
+            gap: 7rem;
+             margin-top: 5rem;
+            
+            
+            
+    
+        }
+        .request__btn{
+            width: auto;
+            height: 60px;
+            padding: 1rem;
+            margin-top: 2rem;
+            
+        }
+        
+        body{
+            font-size: 1.3rem;
+        }
+     
+    }
